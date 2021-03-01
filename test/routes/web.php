@@ -27,4 +27,4 @@ Route::get('/about', function(){
 Route::get('/user/{id}', function($id){
     return 'This is '.$id;
 });
-Route::get('/controllertest','PagesController@index');
+Route::get('/ctest','CTests@ctestf');
