@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class CTests extends Controller
 {
     //
-    public function ctest(){
+    public function ctestf(){
         return view('pages.index');
     }
 }
