@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\RegisterRequest;
 
 class Registration extends Controller
 {
@@ -14,9 +15,9 @@ class Registration extends Controller
 
     public function registerVerify(RegisterRequest $req)
     {
-        $user =new All;
+        $user =new users;
 
-        $user->role = 'coustomers';
+        $user->role = 'coustomer';
         $user->full_name = $req->full_name;
         $user->username = $req->username;
         $user->email = $req->email;
@@ -30,6 +31,6 @@ class Registration extends Controller
         $user->save();
 
         return redirect('/login');
-        //echo 'hello';
+
     }
 }

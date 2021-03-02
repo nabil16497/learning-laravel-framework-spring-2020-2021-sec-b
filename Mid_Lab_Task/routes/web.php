@@ -21,4 +21,4 @@ Route::post('/login','Login@verify');
 Route::get('/home','Home@home');
 Route::get('/logout', 'Logout@logout');
 Route::get('/registration','Registration@register');
-Route::post('/registration','Registration@registeerVerify');
+Route::post('/registration','Registration@registerVerify');
