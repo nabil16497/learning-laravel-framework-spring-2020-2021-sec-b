@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\RegisterRequest;
+use App\Models\User;
 
 class Registration extends Controller
 {
@@ -15,7 +16,7 @@ class Registration extends Controller
 
     public function registerVerify(RegisterRequest $req)
     {
-        $user =new users;
+        $user =new User;
 
         $user->role = 'coustomer';
         $user->full_name = $req->full_name;
