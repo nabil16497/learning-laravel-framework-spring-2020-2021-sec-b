@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Delete Existing Product</h1>
-    <h1></h1>
+    
 
     <h2>Product Id: {{ $data['id'] }}</h2>
 
