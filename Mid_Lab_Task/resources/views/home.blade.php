@@ -7,11 +7,11 @@
 	
 </head>
 <body>
-	<h1>Welcome {{session('username')}} </h1><br>
-    <h2>    Email- {{ session('email') }} <br>
-    Status-  {{ session('user_type') }}  </h2>
+	<h1>Welcome {{$user['username']}} </h1>
+    <h2>    Email- {{$user['email']}} <br>
+    Status-  {{$user['user_type']}}  </h2>
     
-    <a href=""><button>View User</button></a> |
+    <a href=""><button>View User</button></a><br><br>
     <a href="/logout"><button>Logout</button></a>
     <br>
     
