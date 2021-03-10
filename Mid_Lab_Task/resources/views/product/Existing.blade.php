@@ -30,9 +30,9 @@
                 <td>{{$i['unit_price']}}</td>
                 <td>{{$i['status']}}</td>
                 <td>
-                    <a href="{{route('product.exEdit', [$i['id']])}}">Edit</a>
-                    <a href="{{route('product.exDelete', [$i['id']])}}">Delete</a>
-                    <a href="{{route('product.exShow', [$i['id']])}}">Details</a>
+                    <a href="{{route('product.exEdit', [$i['id']])}}"><button>Edit</button></a>
+                    <a href="{{route('product.exDelete', [$i['id']])}}"><button>Delete</button></a>
+                    <a href="{{route('product.exShow', [$i['id']])}}"><button>Details</button></a>
                 </td>
             </tr>
             @endforeach     

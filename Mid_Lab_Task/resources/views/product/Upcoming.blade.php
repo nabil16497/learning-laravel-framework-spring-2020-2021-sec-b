@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Upcoming Product</h1>
-    <h1>Upcoming Product {{$count}}</h1>
+    <h2>Number of Upcoming Product {{$count}}</h2>
 
     <table>
 
@@ -30,9 +30,9 @@
                 <td>{{$i['unit_price']}}</td>
                 <td>{{$i['status']}}</td>
                 <td>
-                    <a href="{{route('product.upEdit', [$i['id']])}}">Edit</a>
-                    <a href="{{route('product.upDelete', [$i['id']])}}">Delete</a>
-                    <a href="{{route('product.upShow', [$i['id']])}}">Details</a>
+                    <a href="{{route('product.upEdit', [$i['id']])}}"><button>Edit</button></a>
+                    <a href="{{route('product.upDelete', [$i['id']])}}"><button>Delete</button></a>
+                    <a href="{{route('product.upShow', [$i['id']])}}"><button>Details</button></a>
                 </td>
             </tr>
             @endforeach     

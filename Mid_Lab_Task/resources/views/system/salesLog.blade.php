@@ -9,9 +9,9 @@
 <body>
     <h1>Sales Log</h1>
 
-    
+
         <h2>Last 7 days sells</h2>
-        <table>
+        <table border = 1>
             <tr>
                 <td>Id</td>
                 <td>Coustomer Name</td>
@@ -28,7 +28,7 @@
                 <td>Created At</td>
                 <td>Updated At</td>
             </tr>
-            
+
                 @foreach ($data as $it)
                 <tr>
                     <td>{{$it['id']}}</td>
@@ -48,11 +48,11 @@
                 </tr>
                 @endforeach
         </table>
-    
+
         <br> <br>
         <h2>How you want to download</h2>
-    
-        <a href="/downloadpdf"><button>Download as pdf</button></a>  | 
+
+        <a href="/downloadpdf"><button>Download as pdf</button></a>  |
         <a href="/downloadexcel"><button>Download as Excel</button></a>
         <a href="/uploadexcelview"><button>Upload Excel File</button></a>
 

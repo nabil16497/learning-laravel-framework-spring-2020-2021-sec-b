@@ -13,7 +13,7 @@
     <form method="post">
     	@csrf
 		<fieldset>
-			<legend>Add</legend>
+
 			<table>
 				<tr>
 					<td>Product Name</td>
@@ -41,7 +41,7 @@
 							<option value="upcoming"> UPCOMING </option>
 						</select>
 					</td>
-				</tr>	
+				</tr>
                 <td><input type="submit" name="submit" value="Add Product"></td>
 			</table>
 		</fieldset>

@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/login','Login@login');
 Route::post('/login','Login@verify');
 Route::get('/home','Home@home');
@@ -25,28 +26,30 @@ Route::post('/registration','Registration@registerVerify');
 
 
 Route::get('/system/product_management/existing_products', 'Product@existingProductsView');
-
-    Route::get('/system/product_management/edit/existing_products/{id}','Product@exEdit')->name('product.exEdit');
-    Route::post('/system/product_management/edit/existing_products/{id}','Product@exUpdate');
-
-    Route::get('/system/product_management/delete/existing_products/{id}','Product@exDelete')->name('product.exDelete');
-    Route::post('/system/product_management/delete/existing_products/{id}','Product@exDestroy');
-
-    Route::get('/system/product_management/details/existing_products/{id}','Product@exShow')->name('product.exShow');
-
-    
-    
-    Route::get('system/product_management/upcoming_products', 'Product@upcomingProductsView');
-
-    Route::get('/system/product_management/edit/upcoming_products/{id}','Product@upEdit')->name('product.upEdit');
-    Route::post('/system/product_management/edit/upcoming_products/{id}','Product@upUpdate');
-
-    Route::get('/system/product_management/delete/upcoming_products/{id}','Product@upDelete')->name('product.upDelete');
-    Route::post('/system/product_management/delete/upcoming_products/{id}','Product@upDestroy');
-
-    Route::get('/system/product_management/details/upcoming_products/{id}','Product@upShow')->name('product.upShow');
+Route::get('/system/product_management/edit/existing_products/{id}','Product@exEdit')->name('product.exEdit');
+Route::post('/system/product_management/edit/existing_products/{id}','Product@exUpdate');
+Route::get('/system/product_management/delete/existing_products/{id}','Product@exDelete')->name('product.exDelete');
+Route::post('/system/product_management/delete/existing_products/{id}','Product@exDestroy');
+Route::get('/system/product_management/details/existing_products/{id}','Product@exShow')->name('product.exShow');
+  
+  
+Route::get('system/product_management/upcoming_products', 'Product@upcomingProductsView');
+Route::get('/system/product_management/edit/upcoming_products/{id}','Product@upEdit')->name('product.upEdit');
+Route::post('/system/product_management/edit/upcoming_products/{id}','Product@upUpdate');
+Route::get('/system/product_management/delete/upcoming_products/{id}','Product@upDelete')->name('product.upDelete');
+Route::post('/system/product_management/delete/upcoming_products/{id}','Product@upDestroy');
+Route::get('/system/product_management/details/upcoming_products/{id}','Product@upShow')->name('product.upShow');
 
 
+Route::get('system/product_management/add_product', 'Product@addProductView');
+Route::post('system/product_management/add_product', 'Product@store');
 
-    Route::get('system/product_management/add_product', 'Product@addProductView');
-    Route::post('system/product_management/add_product', 'Product@store');
+
+Route::get('/system/sales/physical_store', 'PhysicalChannelStorage@physicalStoreView');
+Route::get('/system/sales/social_media', 'PhysicalChannelStorage@socialMediaView');
+Route::get('/system/sales/ecommerce', 'PhysicalChannelStorage@ecommerceView');
+Route::get('/system/sales/physical_store/sales_log', 'PhysicalChannelStorage@salesLogView');
+Route::get('/downloadpdf', 'PhysicalChannelStorage@downloadPdf');
+Route::get('//downloadexcel', 'PhysicalChannelStorage@downloadExcel');
+Route::get('/uploadexcelview', 'PhysicalChannelStorage@uploadExcelView');
+Route::post('/uploadexcelview', 'PhysicalChannelStorage@uploadExcel');
